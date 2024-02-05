@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { walletAddress } = useContext(WalletContext)
   const router = useRouter()
   const pathname = usePathname()
-  const pathRegex = pathname.match(/(\/[^\/]+\/[^\/]+\/)/)
+  const pathRegex = pathname ? pathname.match(/(\/[^\/]+\/[^\/]+\/)/) : null
   const path = pathRegex ? pathRegex[1] : pathname
 
   const handleTabSwitch = (route: string) => {
