@@ -20,12 +20,12 @@ export default function IndexPage() {
     
     useEffect(() => {
         // Read the 'address' query parameter from the URL
-        const addressParam = searchParams.get('address');
-    
-        // Update the state with the address from the query parameter, if it exists
-        if (addressParam) {
-          setAddress(addressParam);
+        if (searchParams !== null) {
+            const addressParam = searchParams.get('address') || "demo.eth";
+            setAddress(addressParam);
         }
+        
+        // Update the state with the address from the query parameter, if it exists
     }, [searchParams]);
 
     const handleResolvedAddress = async (e: any) => {
