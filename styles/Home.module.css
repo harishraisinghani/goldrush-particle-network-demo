@@ -196,7 +196,104 @@
     animation: spin 1s linear infinite;
     margin: 0 auto;
   }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .button {
+    background-color: #cc33d7;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #7400b3;
+  }
+  
+  .button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .buttonLogo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .addressContainer {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #3d3d3d;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .addressContainer h3 {
+    margin-top: 0;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .addressContainer p {
+    margin: 0;
+    word-break: break-all;
+  }
+
+  .exploreWalletButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+
+  .exploreWalletButton:hover {
+    background-color: #0056b3;
+  }
+
+  .greyButton {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+  }
+
+  .greyButton:hover {
+    background-color: #5a6268;
+  }
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);
